@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <script src="js/knockout.js"></script>
+      <p>Cat Name: <strong data-bind="text: catName"></strong></p>
+      <p>Nick Name: <strong data-bind="text: nickName"></strong></p>
+      <p data-bind="text: counter"></p>
+      <img src="" data-bind="click: incrementCounter, attr: {src: imgSrc}">
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
