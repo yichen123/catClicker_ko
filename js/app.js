@@ -11,11 +11,12 @@ var Cat = function(){
 };
 
 function AppViewModel() {
+    var self = this
     // data
     this.currentCat = ko.observable(new Cat());
     // operations
     this.incrementCounter = function() {
-        this.currentCat().counter(this.currentCat().counter() + 1);
+        self.currentCat().counter(self.currentCat().counter() + 1);
     };
 }
 
