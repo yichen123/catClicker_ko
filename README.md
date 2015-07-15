@@ -1,2 +1,2 @@
 # catClicker_ko
-knockout version for implementing cat clicker
+This is a knockout version for implementing cat clicker
