@@ -6,6 +6,11 @@
   </head>
 
   <body>
+    <div data-bind="foreach: catList">
+        <span>
+          <button data-bind="text: catName, click: $parent.changeCurrentCat">
+        </span>
+    </div>
     <div data-bind="with: currentCat()">
       <p>Cat Name: <strong data-bind="text: catName"></strong></p>
       <p data-bind="text: counter"></p>
