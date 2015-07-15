@@ -1,19 +1,20 @@
 //data
-var Cat = function(){
-    this.catName = ko.observable('Jack');
-    this.nickNames = ko.observableArray([
-        'Light',
-        'Fast',
-        'Storm'
-    ]);
-    this.imgSrc = ko.observable('img/cat1.jpg');
-    this.counter = ko.observable(0);
+var Cat = function(data){
+    this.catName = ko.observable(data.name);
+    this.nickNames = ko.observableArray(data.nickNames);
+    this.imgSrc = ko.observable(data.imgSrc);
+    this.counter = ko.observable(data.click);
 };
 
 function AppViewModel() {
     var self = this
     // data
-    this.currentCat = ko.observable(new Cat());
+    this.currentCat = ko.observable(new Cat({
+        name: 'Jack',
+        nickNames : ['Light', 'Fast', 'Storm'],
+        imgSrc : 'img/cat1.jpg',
+        click: 0
+    }));
     // operations
     this.incrementCounter = function() {
         self.currentCat().counter(self.currentCat().counter() + 1);
