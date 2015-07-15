@@ -1,8 +1,12 @@
 function AppViewModel() {
     // Data
-    this.catName = ko.observable("Jack");
-    this.nickName = ko.observable("Light");
-    this.imgSrc = ko.observable("img/cat1.jpg");
+    this.catName = ko.observable('Jack');
+    this.nickNames = ko.observableArray([
+        {nickName: 'Light'},
+        {nickName: 'Fast'},
+        {nickName: 'Storm'}
+    ]);
+    this.imgSrc = ko.observable('img/cat1.jpg');
     this.counter = ko.observable(0);
 
     // operations
