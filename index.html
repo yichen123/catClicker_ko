@@ -9,9 +9,9 @@
     <div data-bind="with: currentCat()">
       <p>Cat Name: <strong data-bind="text: catName"></strong></p>
       <p data-bind="text: counter"></p>
-      <img src="" data-bind="click: this.incrementCounter, attr: {src: imgSrc}">
+      <img src="" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
       <div data-bind="foreach: nickNames">
-          <p data-bind="text: nickName"></p>
+          <p data-bind="text: $data"></p>
       </div>
     </div>
     <script src="js/knockout.js"></script>

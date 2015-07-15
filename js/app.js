@@ -2,9 +2,9 @@
 var Cat = function(){
     this.catName = ko.observable('Jack');
     this.nickNames = ko.observableArray([
-        {nickName: 'Light'},
-        {nickName: 'Fast'},
-        {nickName: 'Storm'}
+        'Light',
+        'Fast',
+        'Storm'
     ]);
     this.imgSrc = ko.observable('img/cat1.jpg');
     this.counter = ko.observable(0);
