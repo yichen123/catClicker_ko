@@ -1,5 +1,5 @@
-function AppViewModel() {
-    // Data
+//data
+var Cat = function(){
     this.catName = ko.observable('Jack');
     this.nickNames = ko.observableArray([
         {nickName: 'Light'},
@@ -8,10 +8,14 @@ function AppViewModel() {
     ]);
     this.imgSrc = ko.observable('img/cat1.jpg');
     this.counter = ko.observable(0);
+};
 
+function AppViewModel() {
+    // data
+    this.currentCat = ko.observable(new Cat());
     // operations
     this.incrementCounter = function() {
-        this.counter(this.counter() + 1);
+        this.currentCat().counter(this.currentCat().counter() + 1);
     };
 }
 

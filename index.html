@@ -6,13 +6,15 @@
   </head>
 
   <body>
-    <script src="js/knockout.js"></script>
+    <div data-bind="with: currentCat()">
       <p>Cat Name: <strong data-bind="text: catName"></strong></p>
       <p data-bind="text: counter"></p>
-      <img src="" data-bind="click: incrementCounter, attr: {src: imgSrc}">
+      <img src="" data-bind="click: this.incrementCounter, attr: {src: imgSrc}">
       <div data-bind="foreach: nickNames">
           <p data-bind="text: nickName"></p>
       </div>
+    </div>
+    <script src="js/knockout.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
